@@ -11,4 +11,6 @@ weeks = left * 52
 
 months = left * 12
 
-print("You have " + str(days) + " days, " + str(weeks) + " weeks and " + str(months) + " months left.")
+# print("You have " + str(days) + " days, " + str(weeks) + " weeks and " + str(months) + " months left.")
+
+print(f"You have {days} days, {weeks} weeks and {months} months left.")
