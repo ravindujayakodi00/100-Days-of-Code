@@ -1,14 +1,23 @@
-# 🚨 Don't change the code below 👇
-year = int(input("Which year do you want to check? "))
-# 🚨 Don't change the code above 👆
+# conditional statement
 
-#Write your code below this line 👇
+print("Welcome to the Roller coaster")
+height = int(input("What is your height in cm? "))
 
-if year % 4 == 0:
-    if year % 100 != 0 or year % 400 == 0:
-        print("Leap year")
+if height > 120:
+    print("You can ride the Roller coaster!")
+    age = int(input("What is your age? "))
+    if age > 18:
+        bill = 12
+    elif 18 > age > 12:
+        bill = 7
     else:
-        print("Not leap year")
-else:
-    print("Not leap year.")
+        bill = 5
 
+    photo = input("Do you need a photo? (Y/N)")
+    if photo == 'Y':
+        bill += 6
+        print(f"Your total bill is {bill}$")
+    else:
+        print(f"Your total bill is {bill}")
+else:
+    print("Sorry, you have to grow taller before you can ride.")
