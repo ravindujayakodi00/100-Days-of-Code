@@ -9,7 +9,7 @@ print(student_scores)
 index = 0
 highestScore = 0
 for x in student_scores:
-    if x > student_scores[index] and x > highestScore:
+    if x > highestScore:
         highestScore = x
 print(f"The highest score in the class is: {highestScore}")
 
