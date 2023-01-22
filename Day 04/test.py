@@ -9,13 +9,22 @@ import random
 # random_float = random.random() * 5
 # print(random_float)
 
-states_of_america = ["New York", "California", "New Jersey"]
+# states_of_america = ["New York", "California", "New Jersey"]
+#
+# print(states_of_america)
+#
+# states_of_america.extend("Hawaii")
+#
+# print(states_of_america)
 
-print(states_of_america)
+# states_of_america[-1] = "Goagia"
+#
+# print(states_of_america)
 
-states_of_america.extend("Hawaii")
+fruits = ["Apple", "Grapes", "Pears"]
+vegetable = ["Potato", "Tomato", "Carrot"]
 
-print(states_of_america)
+all = [fruits, vegetable]
 
-
+print(all[1][1])
 
