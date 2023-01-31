@@ -7,3 +7,8 @@
 
 print(round(2.6666,2))
 
+import math
+
+print(round(45.2222))
+print(math.ceil(45.2222))
+
