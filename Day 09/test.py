@@ -22,3 +22,16 @@ dictionary["Loop"] = "The action of doing something over and over again."
 for key in dictionary:
     print(key + ":")
     print(dictionary[key])
+
+
+# Nesting Dictionary inside a list
+travel_log = [
+    {
+        "country": "France",
+        "visited_cities": ["Paris", "Lyon", "Nice"]
+    },
+    {
+        "country": "Denmark",
+        "visited_cities": ["Roskilde", "Aarhus", "Copenhagen"]
+    }
+]
