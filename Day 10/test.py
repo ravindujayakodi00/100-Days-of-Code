@@ -11,6 +11,10 @@
 # test 1
 
 def format_name(fname, lname):
+    """Take First name Last Name
+     and format it as a title text"""
     return fname.title() + " " + lname.title()
 
-print(format_name("ravindu", "jaYakodi"))
+
+print(format_name(input("Enter First Name: "), input("Enter Last Name: ")))
+
