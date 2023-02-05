@@ -40,6 +40,11 @@ if want_to_play == "y":
         current_score = my_cards[0] + my_cards[1] + my_cards[2]
         print(f"Your Cards: {my_cards} Current Score: {current_score}")
 
+    if current_score > 21:
+        print("You Lost")
+    else:
+        print(f"Computer Cards : {computer_cards}")
+
 # #################### Hints #####################
 #
 # Hint 1: Go to this website and try out the Blackjack game:
