@@ -38,12 +38,21 @@ if want_to_play == "y":
     if choice == "y":
         my_cards.append(random.choice(cards))
         current_score = my_cards[0] + my_cards[1] + my_cards[2]
+        computer_score = computer_cards[0] + computer_cards[1]
         print(f"Your Cards: {my_cards} Current Score: {current_score}")
+
 
     if current_score > 21:
         print("You Lost")
     else:
         print(f"Computer Cards : {computer_cards}")
+
+        if computer_score == current_score:
+            print("Draw")
+        elif computer_score > current_score:
+            print("You Lost")
+        elif computer_score < current_score:
+            print("You Win")
 
 # #################### Hints #####################
 #
