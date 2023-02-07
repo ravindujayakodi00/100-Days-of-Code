@@ -24,35 +24,36 @@ if want_to_play == "y":
     import random
     print(logo)
 
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    my_cards = []
+    def deal_card():
+        cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+        card = random.choice(cards)
+        return card
+
+    def calculate_score(cards):
+        if sum(cards) == 21 and len(cards) == 2:
+            return 0
+
+        if 11 in cards and sum(cards) > 21:
+            cards.remove(11)
+            cards.append(1)
+
+        return sum(cards)
+
+    user_cards = []
     computer_cards = []
-    for x in range(0,2):
-        my_cards.append(random.choice(cards))
-    for x in range(0,2):
-        computer_cards.append(random.choice(cards))
-    print(f"Your Cards: {my_cards} Current Score: {my_cards[0] + my_cards[1]}")
-    print(f"Computer's First Card: {computer_cards[0]}")
 
-    choice = input("Do you want another card (y/n) : ").lower()
-    if choice == "y":
-        my_cards.append(random.choice(cards))
-        current_score = my_cards[0] + my_cards[1] + my_cards[2]
-        computer_score = computer_cards[0] + computer_cards[1]
-        print(f"Your Cards: {my_cards} Current Score: {current_score}")
+    for x in range(0, 2):
+        user_cards.append(deal_card())
+        computer_cards.append(deal_card())
+
+    user_score = calculate_score(user_cards)
+    computer_score = calculate_score(computer_cards)
+
+    if user_score > 21:
+        print("You Lost, Game Over")
 
 
-    if current_score > 21:
-        print("You Lost")
-    else:
-        print(f"Computer Cards : {computer_cards}")
 
-        if computer_score == current_score:
-            print("Draw")
-        elif computer_score > current_score:
-            print("You Lost")
-        elif computer_score < current_score:
-            print("You Win")
 
 # #################### Hints #####################
 #
